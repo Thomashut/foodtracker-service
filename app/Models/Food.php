@@ -44,11 +44,11 @@ class Food extends Model
     {
         $data = request();
 
-        $this->name = $request->name ?? $this->name;
-        $this->description = $request->description ?? $this->description;
-        $this->notes = $request->notes ?? $this->notes;
-        $this->created_by = $request->created_by ?? $this->created_by;
-        $this->active = $request->active ?? $this->active;
+        $this->name = $data->name ?? $this->name;
+        $this->description = $data->description ?? $this->description;
+        $this->notes = $data->notes ?? $this->notes;
+        $this->created_by = $data->created_by ?? $this->created_by;
+        $this->active = $data->active ?? $this->active;
 
         $this->save();
     }

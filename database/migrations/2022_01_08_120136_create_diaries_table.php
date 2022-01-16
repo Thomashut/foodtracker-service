@@ -20,6 +20,7 @@ class CreateDiariesTable extends Migration
             $table->date('start')->nullable();
             $table->date('end')->nullable();
             $table->text('goal')->nullable();
+            $table->boolean('active')->nullable()->default(1);
             $table->uuid('created_by')->nullable();
             $table->timestamps();
         });

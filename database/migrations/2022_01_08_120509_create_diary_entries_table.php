@@ -20,6 +20,7 @@ class CreateDiaryEntriesTable extends Migration
             $table->BigInteger('food_id');
             $table->text('notes')->nullable();
             $table->date('entry_date');
+            $table->boolean('active')->nullable()->default(1);
             $table->timestamps();
         });
     }
